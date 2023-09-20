@@ -1,16 +1,30 @@
 # This is a sample Python script.
+from controllers.society_controller import SocietyController
+from controllers.society_initialisation import SocietyInitialisation
+from views.display_manager import DisplayManager
 
 # Press Maj+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    print('Office filling manager')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # Initialisation of society data
+    society_initializer = SocietyInitialisation()
+    society = society_initializer.initialisation()
+    society_controller = SocietyController(society)
+    display_manager = DisplayManager(society_controller)
+
+    # First society display
+    society_available_space_rate = society_controller.society_available_space_rate()
+    display_manager.display_society_information()
+
+    """
+    while society_available_space_rate < 0:
+    """
+    society_controller.add_a_commercial_employee()
+    display_manager.display_society_information()
+
+    society_controller.add_a_developer_employee()
+    display_manager.display_society_information()
