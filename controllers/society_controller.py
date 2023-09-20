@@ -27,6 +27,10 @@ class SocietyController:
         return rates
 
     def society_available_space_rate(self):
+        """
+        Add all the available space rates of the society
+        :return: an integer
+        """
         society_rate = 0
         for commercial_rate in self.list_of_commercial_offices_available_space_rates():
             society_rate += commercial_rate
@@ -35,6 +39,11 @@ class SocietyController:
         return society_rate
 
     def add_a_commercial_employee(self):
+        """
+        Add a commercial employee in the first commercial office available.
+        :return: True if the addition was made
+                 False if there is no more room to add a new employee
+        """
         commercial_employee_added = False
         for office in self.society.commercial_offices:
             if office.add_an_employee():
@@ -43,6 +52,11 @@ class SocietyController:
         return commercial_employee_added
 
     def add_a_developer_employee(self):
+        """
+        Add a developer employee in the first commercial office available.
+        :return: True if the addition was made
+                 False if there is no more room to add a new employee
+        """
         developer_employee_added = False
         for office in self.society.developer_offices:
             if office.add_an_employee():
