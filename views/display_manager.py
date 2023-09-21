@@ -34,3 +34,7 @@ class DisplayManager:
         self.display_employees_number()
         self.display_offices_available_space_rate()
         self.display_society_available_space_rate()
+
+    def display_message(self, message: str = ""):
+        print("--------------------------------------------")
+        print(message)
