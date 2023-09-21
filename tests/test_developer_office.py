@@ -14,7 +14,7 @@ class TestDeveloperOffice(unittest.TestCase):
             employees_number=2
         )
         expected_value = -10
-        self.assertEquals(sut.available_space_rate(), expected_value)
+        self.assertEqual(sut.available_space_rate(), expected_value)
 
     def test_available_space_rate_should_be_0(self):
         sut = DeveloperOffice(
@@ -26,7 +26,7 @@ class TestDeveloperOffice(unittest.TestCase):
             employees_number=3
         )
         expected_value = 0
-        self.assertEquals(sut.available_space_rate(), expected_value)
+        self.assertEqual(sut.available_space_rate(), expected_value)
 
 
 if __name__ == '__main__':

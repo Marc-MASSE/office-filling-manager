@@ -12,29 +12,29 @@ class TestSocietyController(unittest.TestCase):
         sut = SocietyController(SOCIETY_TEST)
         # 5 = 2 employees in COMMERCIAL_OFFICE_TEST1 + 3 employees in COMMERCIAL_OFFICE_TEST1
         expected_value = 5
-        self.assertEquals(sut.calculate_commercial_employees_number(), expected_value)
+        self.assertEqual(sut.calculate_commercial_employees_number(), expected_value)
 
     def test_calculate_developer_employees_number(self):
         sut = SocietyController(SOCIETY_TEST)
         # 5 = 2 employees in DEVELOPER_OFFICE_TEST1 + 3 employees in DEVELOPER_OFFICE_TEST1
         expected_value = 5
-        self.assertEquals(sut.calculate_developer_employees_number(), expected_value)
+        self.assertEqual(sut.calculate_developer_employees_number(), expected_value)
 
     def test_list_of_commercial_offices_available_space_rates(self):
         sut = SocietyController(SOCIETY_TEST)
         expected_value = [-7, 0]
-        self.assertEquals(sut.list_of_commercial_offices_available_space_rates(), expected_value)
+        self.assertEqual(sut.list_of_commercial_offices_available_space_rates(), expected_value)
 
     def test_list_of_developer_offices_available_space_rates(self):
         sut = SocietyController(SOCIETY_TEST)
         expected_value = [-10, 0]
-        self.assertEquals(sut.list_of_developer_offices_available_space_rates(), expected_value)
+        self.assertEqual(sut.list_of_developer_offices_available_space_rates(), expected_value)
 
     def test_society_available_space_rate(self):
         sut = SocietyController(SOCIETY_TEST)
         # -17 = (-7) + 0 + (-10) + 0
         expected_value = -17
-        self.assertEquals(sut.society_available_space_rate(), expected_value)
+        self.assertEqual(sut.society_available_space_rate(), expected_value)
 
     def test_add_a_commercial_employee_should_return_false(self):
         society = Society()
