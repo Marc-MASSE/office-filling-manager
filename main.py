@@ -1,7 +1,7 @@
 import random
 
+from constants.data_for_initialisation import SOCIETY
 from controllers.society_controller import SocietyController
-from controllers.society_initialisation import SocietyInitialisation
 from views.display_manager import DisplayManager
 
 
@@ -9,9 +9,7 @@ if __name__ == '__main__':
     print('Office filling manager')
 
     # Initialisation of society data
-    society_initializer = SocietyInitialisation()
-    society = society_initializer.initialisation()
-    society_controller = SocietyController(society)
+    society_controller = SocietyController(SOCIETY)
     display_manager = DisplayManager(society_controller)
 
     # First society display

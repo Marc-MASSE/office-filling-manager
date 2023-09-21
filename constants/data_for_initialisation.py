@@ -1,5 +1,6 @@
 from models.commercial_office import CommercialOffice
 from models.developer_office import DeveloperOffice
+from models.society import Society
 
 COMMERCIAL_OFFICE1 = CommercialOffice(
     network_socket_number=6,
@@ -18,7 +19,6 @@ COMMERCIAL_OFFICE2 = CommercialOffice(
     tables_number=4,
     employees_number=2
 )
-
 COMMERCIAL_OFFICE3 = CommercialOffice(
     network_socket_number=3,
     outlets_number=3,
@@ -27,9 +27,6 @@ COMMERCIAL_OFFICE3 = CommercialOffice(
     tables_number=3,
     employees_number=2
 )
-
-COMMERCIAL_OFFICES = [COMMERCIAL_OFFICE1, COMMERCIAL_OFFICE2, COMMERCIAL_OFFICE3]
-
 DEVELOPER_OFFICE1 = DeveloperOffice(
     network_socket_number=15,
     outlets_number=15,
@@ -38,7 +35,6 @@ DEVELOPER_OFFICE1 = DeveloperOffice(
     tables_number=5,
     employees_number=2
 )
-
 DEVELOPER_OFFICE2 = DeveloperOffice(
     network_socket_number=12,
     outlets_number=12,
@@ -47,5 +43,10 @@ DEVELOPER_OFFICE2 = DeveloperOffice(
     tables_number=4,
     employees_number=2
 )
+SOCIETY = Society()
+SOCIETY.add_a_commercial_office(COMMERCIAL_OFFICE1)
+SOCIETY.add_a_commercial_office(COMMERCIAL_OFFICE2)
+SOCIETY.add_a_commercial_office(COMMERCIAL_OFFICE3)
+SOCIETY.add_a_developer_office(DEVELOPER_OFFICE1)
+SOCIETY.add_a_developer_office(DEVELOPER_OFFICE2)
 
-DEVELOPER_OFFICES = [DEVELOPER_OFFICE1, DEVELOPER_OFFICE2]
