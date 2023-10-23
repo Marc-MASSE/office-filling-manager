@@ -29,3 +29,7 @@ pytest -v tests\
 The number of offices and their composition can be found in the file :
 **constants/data_for_initialisation.py**
 
+## UML diagram
+
+![UML Diagram](static/UML_diagram_officemanager.png)
+

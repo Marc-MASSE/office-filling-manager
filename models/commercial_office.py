@@ -16,7 +16,7 @@ class CommercialOffice(Office):
         """
         :return: an integer
             a negative number if there is available space for another employee
-            0 if there is no more room for another employee
+            CommercialOffice0 if there is no more room for another employee
         """
         rate = (
                 self.employees_number - self.network_socket_number +
